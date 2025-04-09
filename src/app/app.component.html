@@ -1,0 +1,14 @@
+<mat-toolbar color="primary">
+  <span>Task Manager</span>
+  <span class="spacer"></span>
+  <button mat-button *ngIf="isLoggedIn()" [routerLink]="['/profile']">
+    <mat-icon>person</mat-icon> Profil
+  </button>
+  <button mat-button *ngIf="isLoggedIn()" (click)="logout()">
+    <mat-icon>logout</mat-icon> Wyloguj
+  </button>
+</mat-toolbar>
+
+<div class="container">
+  <router-outlet></router-outlet>
+</div>

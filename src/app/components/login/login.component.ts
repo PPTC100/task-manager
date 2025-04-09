@@ -13,7 +13,8 @@ import { Inject, PLATFORM_ID } from '@angular/core';
   selector: 'app-login',
   standalone: true,
   imports: [MatInputModule, MatButtonModule, MatCardModule, FormsModule, MatIconModule, RouterModule],
-  templateUrl: './login.component.html'
+  templateUrl: './login.component.html',
+  styleUrls: ['./login.component.scss']
 })
 export class LoginComponent {
   username = '';

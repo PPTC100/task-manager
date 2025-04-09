@@ -1,0 +1,22 @@
+<div class="login-container">
+  <mat-card class="login-card">
+    <mat-card-header>
+      <mat-card-title>Logowanie / Rejestracja</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <form (ngSubmit)="onSubmit()" class="login-form"><br>
+        <mat-form-field appearance="fill" class="full-width">
+          <mat-label>Nazwa użytkownika</mat-label>
+          <input matInput placeholder="Nazwa użytkownika" [(ngModel)]="username" name="username" required>
+        </mat-form-field><br>
+        <mat-form-field appearance="fill" class="full-width">
+          <mat-label>Hasło</mat-label>
+          <input matInput type="password" placeholder="Hasło" [(ngModel)]="password" name="password" required>
+        </mat-form-field><br>
+        <button mat-raised-button color="primary" type="submit" class="full-width">
+          <mat-icon>login</mat-icon> Zaloguj / Zarejestruj
+        </button>
+      </form>
+    </mat-card-content>
+  </mat-card>
+</div>

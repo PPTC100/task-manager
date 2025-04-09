@@ -1,49 +1,22 @@
-.groups-card {
-    padding: 20px;
-    background-color: white;
-  }
-  
-  .group-item {
-    display: flex;
-    align-items: flex-start;
-    border-bottom: 1px solid #e0e0e0;
-    padding: 10px 0;
-    color: #333;
-  }
-  
-  .group-details {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-  }
-  
-  .members-list {
-    margin-top: 10px;
-    margin-left: 20px;
-  }
-  
-  .members-list mat-list-item {
-    font-size: 0.9em;
-    color: #666;
-  }
-  
-  .invite-form {
-    display: flex;
-    gap: 10px;
-    margin-top: 10px;
-  }
-  
-  .spacer {
-    flex: 1 1 auto;
-  }
-  
-  .group-form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    margin-top: 20px;
-  }
-  
-  .full-width {
-    width: 100%;
-  }
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 64px);
+}
+
+.login-card {
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.full-width {
+  width: 100%;
+}

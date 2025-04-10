@@ -1,0 +1,57 @@
+<mat-card class="groups-card">
+    <mat-card-header>
+      <mat-card-title>Twoje grupy</mat-card-title>
+    </mat-card-header><br>
+    <mat-card-content>
+      <mat-accordion>
+        <mat-expansion-panel *ngFor="let group of groups" class="group-panel">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              {{ group.name || 'Brak nazwy' }} ({{ group.members?.length || 0 }} członków)
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <div class="group-content">
+            <div class="members-section">
+              <h4>Członkowie</h4>
+              <mat-list>
+                <mat-list-item *ngFor="let member of getMemberNames(group)">
+                  <mat-icon matListIcon>person</mat-icon>
+                  <span>{{ member }}</span>
+                </mat-list-item>
+                <mat-list-item *ngIf="!group.members || group.members.length === 0">
+                  Brak członków
+                </mat-list-item>
+              </mat-list>
+            </div>
+            <form (ngSubmit)="inviteMember(group.id)" class="invite-form">
+              <mat-form-field appearance="outline" class="invite-input">
+                <mat-label>Zaproś użytkownika</mat-label>
+                <input matInput [(ngModel)]="inviteUsername" name="inviteUsername" placeholder="Nazwa użytkownika" required>
+              </mat-form-field>
+              <button mat-raised-button color="primary" type="submit" class="zapros">
+                <mat-icon>person_add</mat-icon> Zaproś
+              </button>
+            </form>
+            <button mat-raised-button color="primary" (click)="viewTasks(group.id)" class="tasks-button">
+              <mat-icon>assignment</mat-icon> Zadania
+            </button>
+          </div>
+        </mat-expansion-panel>
+        <mat-expansion-panel *ngIf="groups.length === 0">
+          <mat-expansion-panel-header>
+            <mat-panel-title>Brak grup</mat-panel-title>
+          </mat-expansion-panel-header>
+          <p>Nie należysz do żadnej grupy. Stwórz nową poniżej!</p>
+        </mat-expansion-panel>
+      </mat-accordion>
+      <form (ngSubmit)="createGroup()" class="group-form">
+        <mat-form-field appearance="outline" class="group-input">
+          <mat-label>Nazwa grupy</mat-label>
+          <input matInput placeholder="Nazwa grupy" [(ngModel)]="groupName" name="groupName" required>
+        </mat-form-field>
+        <button mat-raised-button color="primary" type="submit" class="create-button">
+          <mat-icon>group_add</mat-icon> Stwórz grupę
+        </button>
+      </form>
+    </mat-card-content>
+  </mat-card>

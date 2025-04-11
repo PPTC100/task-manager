@@ -1,0 +1,25 @@
+<div class="profile-container">
+    <mat-card class="profile-card">
+      <mat-card-header>
+        <mat-card-title>Zarządzaj profilem</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <form (ngSubmit)="updateProfile()" class="profile-form">
+          <mat-form-field appearance="fill" class="full-width">
+            <mat-label>Nazwa użytkownika</mat-label>
+            <input matInput [(ngModel)]="username" name="username" required>
+          </mat-form-field>
+          <mat-form-field appearance="fill" class="full-width">
+            <mat-label>Hasło</mat-label>
+            <input matInput type="password" [(ngModel)]="password" name="password" required>
+          </mat-form-field>
+          <button mat-raised-button color="primary" type="submit" class="full-width">
+            <mat-icon>save</mat-icon> Zapisz zmiany
+          </button>
+        </form>
+        <button mat-raised-button color="warn" (click)="deleteAccount()" class="full-width delete-button">
+          <mat-icon>delete</mat-icon> Usuń konto
+        </button>
+      </mat-card-content>
+    </mat-card>
+  </div>

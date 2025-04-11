@@ -1,0 +1,26 @@
+.profile-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 64px);
+  }
+  
+  .profile-card {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+  }
+  
+  .profile-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .full-width {
+    width: 100%;
+  }
+  
+  .delete-button {
+    margin-top: 20px;
+  }

@@ -1,0 +1,65 @@
+.tasks-card {
+  padding: 20px;
+  background-color: rgb(34, 34, 34);
+  max-width: 800px;
+  margin: 20px auto;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.task-panel {
+  margin-bottom: 10px;
+}
+
+.task-content {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 10px 0;
+}
+
+.task-details {
+  p {
+    margin: 5px 0;
+    color: white;
+  }
+}
+
+.edit-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+
+.edit-input {
+  width: 100%;
+  max-width: 300px;
+}
+
+.delete-button {
+  align-self: flex-start;
+  background-color: rgb(34, 34, 34);
+}
+
+.task-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;
+  align-items: center;
+  width: 100%;
+}
+
+.task-input {
+  width: 100%;
+  max-width: 300px;
+}
+
+.create-task-button {
+  width: 100%;
+  max-width: 300px;
+}
+
+.zapisz {
+  background-color: rgb(34, 34, 34);
+}
